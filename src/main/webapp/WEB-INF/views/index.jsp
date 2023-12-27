@@ -2,9 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Greeting</title>
+  <title>Email Validation</title>
 </head>
 <body>
-<h1>Hello: ${name}</h1>
+<h1>Email Validate</h1>
+<h3 style="color:red">${message}</h3>
+
+<form action="validate" method="post">
+  <input type="text" name="email"><br>
+  <input type="submit" value="Validate">
+</form>
 </body>
 </html>
