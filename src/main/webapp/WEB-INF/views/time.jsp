@@ -5,9 +5,11 @@
   Time: 10:06 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
 <head>
     <title>JSP - Hello World</title>
 </head>
