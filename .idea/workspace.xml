@@ -4,65 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ea5d29-dc17-48a6-9f70-bf5cf2b7a3ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Animal/src/IPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Animal/src/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarManager/src/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarManager/src/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarManager/src/CarPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/java/com/example/lover2/control/SearchAccountControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/java/com/example/lover2/control/SearchStatusAccountControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/webapp/comment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/webapp/information.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/webapp/pagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lover2/src/main/webapp/rank.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/control/AddControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/control/DeleteControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/control/ListControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/control/LoadControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/control/SearchControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/dao/IStudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/dao/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/model/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/java/com/example/crud/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/webapp/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/webapp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../crud/src/main/webapp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/control/AddControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/control/ListControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/control/LoadControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/dao/IStudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/dao/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/model/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/java/com/example/finaltest/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/webapp/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finaltest/src/main/webapp/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/ShapeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pttkb3/src/main/java/com/example/pttkb3/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/Controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/ConverterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/DAO/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/DAO/ICustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/EmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/java/com/example/springgreeting/Model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/views/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/views/converter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/views/dictionary.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-greeting/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="e6ea5d29-dc17-48a6-9f70-bf5cf2b7a3ee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -99,20 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.83" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
@@ -215,7 +160,8 @@
       <workItem from="1704181473146" duration="50000" />
       <workItem from="1704181618533" duration="313000" />
       <workItem from="1704261886720" duration="1184000" />
-      <workItem from="1704336705623" duration="1293000" />
+      <workItem from="1704336705623" duration="5543000" />
+      <workItem from="1704348777016" duration="1141000" />
     </task>
     <servers />
   </component>
