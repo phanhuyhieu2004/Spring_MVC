@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ví dụ Thymeleaf</title>
+</head>
+<body>
+
+<p th:text="${4+5}">
+</p>
+
+
+<!--<h1>Toán tử logic</h1>-->
+<!--<p th:with="x=7, y=3">-->
+<!--    X = <span th:text="${x}"></span><br/>-->
+<!--    Y = <span th:text="${y}"></span><br/>-->
+<!--    <span th:if="${x > 0 and y < 10}">X lớn hơn 0 và Y nhỏ hơn 10</span><br/>-->
+<!--    <span th:if="${x > 0 or y > 10}">X lớn hơn 0 hoặc Y lớn hơn 10</span><br/>-->
+<!--    <span th:if="${not (x > 0 and y < 10)}">X hoặc Y không thỏa mãn điều kiện</span><br/>-->
+<!--    <span th:if="${!(x > 0)}">X không lớn hơn 0</span>-->
+<!--</p>-->
+
+<!--<h1>Toán tử so sánh</h1>-->
+
+<!--<p th:with="x=7, y=3">-->
+<!--    X = <span th:text="${x}"></span><br/>-->
+<!--    Y = <span th:text="${y}"></span><br/>-->
+<!--    <span th:if="${x == 7}">X bằng 7</span><br/>-->
+<!--    <span th:if="${y != 5}">Y khác 5</span><br/>-->
+<!--    <span th:if="${x < 10}">X nhỏ hơn 10</span><br/>-->
+<!--    <span th:if="${y > 0}">Y lớn hơn 0</span><br/>-->
+<!--    <span th:if="${x <= 7}">X nhỏ hơn hoặc bằng 7</span><br/>-->
+<!--    <span th:if="${y >= 3}">Y lớn hơn hoặc bằng 3</span>-->
+<!--</p>-->
+
+<h1>Toán tử điều kiện</h1>
+<p th:with="x=7, y=null">
+    X = <span th:text="${x}"></span><br/>
+    Y = <span th:text="${y}"></span><br/>
+    <!-- Nếu-thì: (if) ? (then) -->
+    X: <span th:text="${x != null} ? ${x}"></span><br/>
+    Y: <span th:text="${y != null} ? ${y}"></span><br/>
+    <!-- Nếu-thì-trái lại: (if) ? (then) : (else) -->
+    X: <span th:text="${x != null} ? ${x} : 'Giá trị mặc định cho X'"></span><br/>
+    Y: <span th:text="${y != null} ? ${y} : 'Giá trị mặc định cho Y'"></span><br/>
+    <!-- Giá trị mặc định: (value) ?: (defaultvalue) -->
+    X: <span th:text="${x ?: 'Giá trị mặc định cho X'}"></span><br/>
+    Y: <span th:text="${y ?: 'Giá trị mặc định cho Y'}"></span>
+</p>
+
+
+
+
+
+
+<!-- Sử dụng các toán tử so sánh -->
+
+</p>
+></body>
+</html>
