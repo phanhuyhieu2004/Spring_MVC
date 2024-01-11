@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h3>Create new song</h3>
+    <p>
+        <a th:href="@{musicapp}">
+            Back to list song
+        </a>
+    </p>
+</center>
+<div id="form">
+    <form th:action="@{/musicapp/save}" method="post" novalidate="novalidate" th:object="${song}" enctype="multipart/form-data">
+        <div>
+            <label>Song: </label>
+            <input type="text" th:field="*{nameSong}">
+        </div>
+        <br>
+        <div>
+            <label>Singer: </label>
+            <input type="text" th:field="*{nameSinger}">
+        </div>
+        <br>
+
+        <div>
+            <label>Kind of music: </label>
+            <input type="text" th:field="*{kindOfMusic}">
+        </div>
+        <br>
+
+        <div>
+            <label>Directory: </label>
+            <input type="file" name="filePath">
+            <input type="hidden" th:field="*{directorySong}">
+        </div>
+        <br>
+
+        <input type="submit" value="save">
+    </form>
+</div>
+</body>
+</html>

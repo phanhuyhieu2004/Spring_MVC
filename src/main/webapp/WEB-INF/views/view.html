@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h3>
+        Song
+    </h3>
+    <p>
+        <a th:href="@{/musicapp}">
+            Back to list song
+        </a>
+    </p>
+</center>
+<label th:text="${song.nameSong}"></label>
+<br>
+<br>
+<audio controls autoplay>
+    <source th:src="@{'/audio/' + ${song.directorySong}}">
+</audio>
+</body>
+</html>

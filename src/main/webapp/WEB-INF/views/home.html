@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <title>App Music</title>
+</head>
+<body>
+<h3>Songs</h3>
+<p>
+  <a th:href="@{/musicapp/create}">
+    Add new song
+  </a>
+</p>
+<table >
+  <thead>
+  <tr>
+    <th>Song</th>
+    <th>Singer</th>
+    <th>Kind of Music</th>
+    <th>Directory</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="row, rowStat : ${listSong}">
+    <td th:text="${row.nameSong}"></td>
+    <td th:text="${row.nameSinger}"></td>
+    <td th:text="${row.kindOfMusic}"></td>
+    <td th:text="${row.directorySong}"></td>
+    <td>
+      <a th:href="@{/musicapp/{id}/view(id=${row.id})}">View</a>
+    </td>
+    <td>
+      <a th:href="@{/musicapp/{id}/edit(id=${row.id})}">Edit</a>
+    </td>
+    <td>
+      <a th:href="@{/musicapp/{id}/delete(id=${row.id})}">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<footer></footer>
+</body>
+</html>
