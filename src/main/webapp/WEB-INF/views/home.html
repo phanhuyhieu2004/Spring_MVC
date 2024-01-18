@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <title>App Music</title>
+</head>
+<body>
+
+<p>
+  <a th:href="@{/pictureapp/create}">
+    Add new picture  </a>
+</p>
+<table >
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Picture</th>
+    <th>Point</th>
+    <th>Author</th>
+    <th>Feedback</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="row, rowStat : ${listPicture}">
+    <td th:text="${rowStat.index + 1}"></td>
+    <td><img width="100" height="100" th:src="${row.img}"  alt="" src=""></td>
+    <td th:text="${row.point}"></td>
+
+    <td th:text="${row.author}"></td>
+    <td th:text="${row.feedback}"></td>
+     </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

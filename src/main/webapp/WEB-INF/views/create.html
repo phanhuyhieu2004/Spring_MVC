@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h3>Create </h3>
+    <p>
+        <a th:href="@{pictureapp}">
+            Back to list
+        </a>
+    </p>
+</center>
+<div id="form">
+    <form th:action="@{/pictureapp/save}" method="post" novalidate="novalidate" th:object="${picture}" >
+        <img id="img-of-the-day" style="width: 100%" src="https://timnhadat.s3-ap-southeast-1.amazonaws.com/images/raovat/2022/08/16/133051071448705943-28.jpg" >
+        <br>
+        <div>
+            <label>Point: </label>
+            <input type="number" th:field="*{point}">
+        </div>
+        <br>
+
+        <div>
+            <label>Author: </label>
+            <input type="text" th:field="*{author}">
+        </div>
+        <br>
+
+        <div>
+            <label>Feedback: </label>
+            <textarea  type="text" th:field="*{feedback}"></textarea>
+        </div>
+        <br>
+
+        <input type="submit" value="save">
+    </form>
+</div>
+<script>
+    let query = 'https://timnhadat.s3-ap-southeast-1.amazonaws.com/images/raovat/2022/08/16/133051071448705943-28.jpg  ';
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function() {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.url);
+        }
+    };
+    request.send();
+</script>
+</body>
+</html>
+
