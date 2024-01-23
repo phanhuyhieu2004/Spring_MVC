@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiế blog</title>
+</head>
+<body>
+<h1>Chi tiết blog</h1>
+<p>
+    <a href="/blogs">Quay ve blog list</a>
+</p>
+<table border="1">
+    <tr>
+        <td>Id:</td>
+        <td th:text="${blog.get().getId()}"></td>
+    </tr>
+    <tr>
+        <td>BlogName:</td>
+        <td th:text="${blog.get().getBlogName()}"></td>
+    </tr>
+    <tr>
+        <td>Content:</td>
+        <td th:text="${blog.get().getContent()}"></td>
+    </tr>
+    <tr>
+        <td>Category:</td>
+        <td th:text="${blog.get().getCategory().getCategoryName()}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xem danh sách blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-image: url("https://img.meta.com.vn/data/image/2022/12/30/background-tet-2023-20.jpg");
+        background-size: cover;
+    }
+    #hoamaitet{position:absolute;left:0px;top:0px;}
+    .hoamai{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+    .hoamai:hover {cursor:default}
+</style>
+
+<div id='hoamaitet'>
+    <p class='hoamai'><img style="width:20px" src="https://1.bp.blogspot.com/-CXx9jt2JMRk/Vq-Lh5fm88I/AAAAAAAASwo/XivooDn_oSY/s1600/hoamai.png" /></p>
+</div>
+<script >
+    //<![CDATA[
+    var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var hoamais=[];var browserWidth;var browserHeight;var numberOfhoamais=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generatehoamais,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function hoamai(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}hoamai.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generatehoamais(){var b=document.querySelector(".hoamai");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfhoamais;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new hoamai(j,g,c,e,a);hoamais.push(f)}h.removeChild(b);movehoamais()}function movehoamais(){for(var b=0;b<hoamais.length;b++){var a=hoamais[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<hoamais.length;b++){var a=hoamais[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(movehoamais)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+    //]]>
+</script>
+<body style="color: white;text-align: center;
+  margin-top: 100px;">
+<h1>Blogs</h1>
+<form>
+    Tìm theo blogName:
+    <input type="text" name="s"/>
+    <input type="submit" value="Search"/>
+</form>
+<p>
+    <a href="/create-blog" style="color: white">Tạo 1 blog mới</a>
+</p>
+<p>
+    <a th:href="@{/categorys}"style="color: white">
+        Danh mục
+    </a>
+</p>
+<!--<table border="1" style="margin-left: 500px;">-->
+<!--    <tr>-->
+<!--        <td>BlogName</td>-->
+<!--        <td>Content</td>-->
+<!--        <td>Category</td>-->
+<!--        <td>Edit</td>-->
+<!--        <td>Delete</td>-->
+<!--        <td>view</td>-->
+<!--    </tr>-->
+
+<!--        <tr th:each="blog : ${blogs}">-->
+
+<!--            <td th:text="${blog.blogName}"></td>-->
+<!--            <td th:text="${blog.content}"></td>-->
+<!--            <td th:text="${blog.category.categoryName}"></td>-->
+<!--            <td><a th:href="@{/update-blog/__${blog.id}__}"style="color: white">edit</a></td>-->
+<!--            <td><a th:href="@{/delete-blog/__${blog.id}__}"style="color: white">delete</a></td>-->
+<!--            <td><a th:href="@{/view-blog/__${blog.id}__}"style="color: white">view</a></td>-->
+<!--        </tr>-->
+
+<!--</table>-->
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">BlogName</th>
+        <th scope="col">Content</th>
+        <th scope="col">Category</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="blog : ${blogs}">
+                <tr>
+                    <td th:text="${blog.blogName}"></td>
+                    <td th:text="${blog.content}"></td>
+                    <td th:text="${blog.category.categoryName}"></td>
+
+                    <td> <button type="button" class="btn btn-primary"><a th:href="@{/update-blog/__${blog.id}__}"style="color: white;
+  text-decoration: none;">Edit</a></button></td>
+                    <td><a th:href="@{/delete-blog/__${blog.id}__}">delete</a></td>
+                    <td><a th:href="@{/view-blog/__${blog.id}__}">view</a></td>
+                </tr>
+            </th:block>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}"style="color: white">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>......<span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}"style="color: white">Next</a>
+</div>
+</body>
+</html>
