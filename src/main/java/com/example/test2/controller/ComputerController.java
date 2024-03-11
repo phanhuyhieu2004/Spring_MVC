@@ -39,7 +39,7 @@ public class ComputerController {
 
     @PostMapping
     public ResponseEntity<Computer> saveComputer(@RequestBody Computer computer) {
-        return new ResponseEntity<>(iComputerService.save(employee), HttpStatus.CREATED);
+        return new ResponseEntity<>(iComputerService.save(computer), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
