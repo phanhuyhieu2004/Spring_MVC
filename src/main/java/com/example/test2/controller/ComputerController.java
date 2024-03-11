@@ -38,7 +38,7 @@ public class ComputerController {
     }
 
     @PostMapping
-    public ResponseEntity<Computer> saveComputer(@RequestBody Computer employee) {
+    public ResponseEntity<Computer> saveComputer(@RequestBody Computer computer) {
         return new ResponseEntity<>(iComputerService.save(employee), HttpStatus.CREATED);
     }
 
