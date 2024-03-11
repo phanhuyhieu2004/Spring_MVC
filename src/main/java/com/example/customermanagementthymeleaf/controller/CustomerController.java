@@ -1,4 +1,4 @@
-package com.example.customermanagementthymeleaf.controller;
+package com.example.customermanagementthymeleaf.controllergh;
 
 
 import com.example.customermanagementthymeleaf.model.Customer;
