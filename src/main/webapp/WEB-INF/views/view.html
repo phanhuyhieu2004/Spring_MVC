@@ -18,8 +18,8 @@
 <label th:text="${song.nameSong}"></label>
 <br>
 <br>
-<audio controls autoplay>
+<video controls autoplay>
     <source th:src="@{'/audio/' + ${song.directorySong}}">
-</audio>
+</video>
 </body>
 </html>

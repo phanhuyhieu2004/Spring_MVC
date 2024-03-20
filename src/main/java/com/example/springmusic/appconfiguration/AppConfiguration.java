@@ -63,12 +63,12 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/audio/**")
-                .addResourceLocations("songs/");
+                .addResourceLocations("file:C:\\Users\\hieuh\\IdeaProjects\\tmp\\image\\");
     }
     @Bean(name = "multipartResolver")
     public CommonsMultipartResolver getResolver() {
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-        resolver.setMaxUploadSizePerFile(10*1024*1024);
+        resolver.setMaxUploadSizePerFile(100000*1024*1024);
         return resolver;
     }
 }
