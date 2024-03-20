@@ -1,4 +1,4 @@
-package com.example.springmusic.appconfigurationnnnn;
+package com.example.springmusic.appconfiguration;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
@@ -61,7 +61,7 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegit gistry registry) {
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/audio/**")
                 .addResourceLocations("file:C:\\Users\\hieuh\\IdeaProjects\\tmp\\image\\");
     }
