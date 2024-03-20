@@ -61,7 +61,7 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(ResourceHandlerRegit gistry registry) {
         registry.addResourceHandler("/audio/**")
                 .addResourceLocations("file:C:\\Users\\hieuh\\IdeaProjects\\tmp\\image\\");
     }
