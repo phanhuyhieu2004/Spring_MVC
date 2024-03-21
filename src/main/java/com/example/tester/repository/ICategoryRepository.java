@@ -1,7 +1,5 @@
-package com.example.jwtspring3.repository;
-
-import com.example.jwtspring3.model.Category;
-import com.example.jwtspring3.model.Product;
+package com.example.tester.repository;
+import com.example.tester.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

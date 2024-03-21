@@ -1,4 +1,4 @@
-package com.example.jwtspring3.model;
+package com.example.tester.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

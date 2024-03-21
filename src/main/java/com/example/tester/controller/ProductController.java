@@ -1,9 +1,10 @@
-package com.example.jwtspring3.controller;
+package com.example.tester.controller;
 
 
 
-import com.example.jwtspring3.model.Product;
-import com.example.jwtspring3.service.IProductService;
+
+import com.example.tester.model.Product;
+import com.example.tester.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

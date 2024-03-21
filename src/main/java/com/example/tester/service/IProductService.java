@@ -1,8 +1,9 @@
-package com.example.jwtspring3.service;
+package com.example.tester.service;
 
 
 
-import com.example.jwtspring3.model.Product;
+
+import com.example.tester.model.Product;
 
 import java.util.List;
 

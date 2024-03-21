@@ -1,7 +1,7 @@
-package com.example.jwtspring3.service;
+package com.example.tester.service;
 
-import com.example.jwtspring3.model.Category;
-import com.example.jwtspring3.model.Product;
+
+import com.example.tester.model.Category;
 
 public interface ICategoryService extends IGeneralService<Category>{
 }

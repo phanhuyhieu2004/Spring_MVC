@@ -1,9 +1,8 @@
-package com.example.jwtspring3.service;
+package com.example.tester.service;
 
-import com.example.jwtspring3.model.Category;
-import com.example.jwtspring3.model.Product;
-import com.example.jwtspring3.repository.ICategoryRepository;
-import com.example.jwtspring3.repository.IProductRepository;
+
+import com.example.tester.model.Category;
+import com.example.tester.repository.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
