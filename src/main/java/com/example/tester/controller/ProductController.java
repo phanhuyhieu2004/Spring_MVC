@@ -75,5 +75,21 @@ public class ProductController {
         }
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
+     @GetMapping("/top3")
+    public ResponseEntity<List<Product>> getTop3Products() {
+        List<Product> top3Products = productService.findTop3();
+        if (top3Products.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(top3Products, HttpStatus.OK);
+    }
+    @GetMapping("/sort")
+    public ResponseEntity<List<Product>> getProductsSort() {
+        List<Product> sortProducts = productService.sortProducts();
+        if (sortProducts.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(sortedProducts, HttpStatus.OK);
+    }
 
 }
