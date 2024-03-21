@@ -38,11 +38,11 @@ public class ProductService implements IProductService{
     public List<Product> findByPrice(Double minPrice, Double maxPrice) {
         return iProductRepository.findByPrice(minPrice, maxPrice);
     }
-      @Override
+    @Override
     public List<Product> findByTop3() {
         return iProductRepository.findTop3();
     }
- @Override
+    @Override
     public List<Product> sortProducts() {
         return iProductRepository.sortProducts();
     }
