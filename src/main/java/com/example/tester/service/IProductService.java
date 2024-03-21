@@ -10,5 +10,6 @@ import java.util.List;
 public interface IProductService extends IGeneralService<Product>{
 
     List<Product> findByPrice(Double minPrice, Double maxPrice);
-
+    List<Products> findTop3();
+    List<Products> sortProducts();
 }
