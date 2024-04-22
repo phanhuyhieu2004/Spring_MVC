@@ -2,8 +2,6 @@ package com.example.customermanagementthymeleaf.controller;
 
 import com.example.customermanagementthymeleaf.model.Customer;
 import com.example.customermanagementthymeleaf.model.Product;
-import com.example.customermanagementthymeleaf.service.CustomerService;
-import com.example.customermanagementthymeleaf.service.ICustomerService;
 import com.example.customermanagementthymeleaf.service.IProductService;
 import com.example.customermanagementthymeleaf.service.ProductService;
 import org.springframework.stereotype.Controller;

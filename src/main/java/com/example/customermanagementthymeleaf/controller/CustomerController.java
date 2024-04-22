@@ -4,70 +4,78 @@ package com.example.customermanagementthymeleaf.controller;
 import com.example.customermanagementthymeleaf.model.Customer;
 import com.example.customermanagementthymeleaf.service.CustomerService;
 import com.example.customermanagementthymeleaf.service.ICustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/customers")
+
 public class CustomerController {
-    private final ICustomerService customerService = new CustomerService();
+    private final ICustomerService iCustomerService = new CustomerService();
 
-    @GetMapping("")
-    public String index(Model model) {
-
-        List<Customer> customerList = customerService.findAll();
-        model.addAttribute("customers", customerList);
-        return "/index";
+    @GetMapping("/customers")
+    public ModelAndView index() {
+        ModelAndView modelAndView = new ModelAndView("/index");
+        List<Customer> customers = iCustomerService.findAll();
+        modelAndView.addObject("customers", customers);
+        return modelAndView;
     }
-
     @GetMapping("/create")
-    public String create(Model model) {
-        model.addAttribute("customer", new Customer());
-        return "/create";
-    }
+    public ModelAndView createCustomer(){
+        ModelAndView modelAndView=new ModelAndView("/create");
+        modelAndView.addObject("customer",new Customer());
+        return modelAndView;
 
+
+    }
     @PostMapping("/save")
-    public String save(Customer customer) {
-        customer.setId((int) (Math.random() * 10000));
-        customerService.save(customer);
-        return "redirect:/customers";
+    public String save(Customer customer,RedirectAttributes redirectAttributes){
+        customer.setId((int) (Math.random()*10000));
+
+iCustomerService.save(customer);
+redirectAttributes.addFlashAttribute("success","tạo thành công");
+return "redirect:/customers";
     }
 
-    @GetMapping("/{id}/edit")
-    public String update(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
+@GetMapping("/delete-customer/{id}")
+    public String deleteCustomer(@PathVariable int id,RedirectAttributes redirectAttributes){
+     try{
+         Customer customer=iCustomerService.findById(id);
+         iCustomerService.remove(customer.getId());
+         redirectAttributes.addFlashAttribute("success","xóa thành công");
+         return "redirect:/customers";
+
+     }catch (Exception e){
+         e.getMessage();
+     }
+     return null;
+}
+@GetMapping("/edit-customer/{id}")
+    public String updateCustomer(@PathVariable int id,Model model){
+
+        model.addAttribute("customer",iCustomerService.findById(id));
         return "/update";
-    }
+}
+@PostMapping("/edit-customer")
+    public String update(Customer customer,RedirectAttributes redirectAttributes){
+iCustomerService.update(customer.getId(),customer);
+    redirectAttributes.addFlashAttribute("success","sửa thành công");
+    return "redirect:/customers";
 
-    @PostMapping("/update")
-    public String update(Customer customer) {
-        customerService.update(customer.getId(), customer);
-        return "redirect:/customers";
-    }
+}
+@GetMapping("/view-customer/{id}")
+    public String view(@PathVariable int id,Model model){
 
-    @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
-        return "/delete";
-    }
+        model.addAttribute("customer",iCustomerService.findById(id));
 
-    @PostMapping("/delete")
-    public String delete(Customer customer, RedirectAttributes redirect) {
-        customerService.remove(customer.getId());
-        redirect.addFlashAttribute("success", "Removed customer successfully!");
-        return "redirect:/customers";
-    }
-
-    @GetMapping("/{id}/view")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
         return "/view";
-    }
+}
 }

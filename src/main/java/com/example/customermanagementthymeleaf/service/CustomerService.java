@@ -3,11 +3,13 @@ package com.example.customermanagementthymeleaf.service;
 
 
 import com.example.customermanagementthymeleaf.model.Customer;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class CustomerService implements ICustomerService {
     private static final Map<Integer, Customer> customers;
@@ -22,6 +24,7 @@ public class CustomerService implements ICustomerService {
         customers.put(6, new Customer(6, "Rose", "rose@codegym.vn", "NewYork"));
     }
 
+
     @Override
     public List<Customer> findAll() {
         return new ArrayList<>(customers.values());
@@ -29,7 +32,12 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void save(Customer customer) {
-        customers.put(customer.getId(), customer);
+        customers.put(customer.getId(),customer);
+    }
+
+    @Override
+    public void remove(int id) {
+        customers.remove(id);
     }
 
     @Override
@@ -39,12 +47,6 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void update(int id, Customer customer) {
-        customers.put(id, customer);
-
-    }
-
-    @Override
-    public void remove(int id) {
-        customers.remove(id);
+        customers.put(id,customer);
     }
 }

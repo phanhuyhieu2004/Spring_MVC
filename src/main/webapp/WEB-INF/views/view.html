@@ -6,22 +6,22 @@
 <body>
 <h3>View Product</h3>
 <p>
-  <a th:href="@{/products}">
+  <a th:href="@{/customers}">
     Back to product list
   </a>
 </p>
 <div id="detail">
   <div class="cus-detail">
     <label>Name:</label>
-    <label th:text="${product.name}"></label>
+    <label th:text="${customer.name}"></label>
   </div>
   <div class="cus-detail">
     <label>Email:</label>
-    <label th:text="${product.email}"></label>
+    <label th:text="${customer.email}"></label>
   </div>
   <div class="cus-detail">
-    <label>Describe:</label>
-    <label th:text="${product.describe}"></label>
+    <label>Address:</label>
+    <label th:text="${customer.address}"></label>
   </div>
 </div>
 <footer th:replace="/layout :: footer"></footer>
