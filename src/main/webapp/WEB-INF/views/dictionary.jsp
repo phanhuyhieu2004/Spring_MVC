@@ -16,12 +16,15 @@
 <body>
 <h2>Từ điển VN </h2>
 <form action="translate"method="post">
-  <input type="text" name="key" placeholder="Enter your word: "/>
+  <input type="text" name="key"  placeholder="Enter your word: "/>
   <input type = "submit" id = "submit" value = "Search"/>
   <br>
-  Result: ${result}
-  <p>${message}</p>
+
 </form>
+<c:if test="${not empty result}">
+      <p> ${result}</p>
+
+  </c:if>
 </body>
 </html>
 

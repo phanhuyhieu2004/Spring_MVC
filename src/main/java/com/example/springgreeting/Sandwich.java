@@ -6,17 +6,18 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
 @Controller
 public class Sandwich {
-    @RequestMapping("/sandwich")
-    public String load() {
-        return "sandwich";
+    @RequestMapping("/sandwichs")
+    public ModelAndView load() {
+        return new ModelAndView("sandwich");
     }
 
 
-    @GetMapping(path = "/save")
-    public String save(@RequestParam("condiment") String[] condiment, Model model) {
-        model.addAttribute("condiment", condiment);
-        return "save";
+    @RequestMapping( "/save")
+    public ModelAndView save(@RequestParam("condiment") String[] condiment) {
+        return new ModelAndView("save","condiment",condiment);
     }
 }

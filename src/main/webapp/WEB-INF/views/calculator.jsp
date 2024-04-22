@@ -15,6 +15,6 @@
         <button type="submit" name="calculation" value="/">/</button>
     </p>
 </form>
-<h2>Result: ${result}</h2>
+
 </body>
 </html>
