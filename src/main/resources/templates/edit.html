@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/edit-video}" th:object="${video}" method="post">
+    <input type="hidden"name="id"th:field="${video.id}">
+    <input type="text" name="name" th:field="${video.name}" required>
+    <input type="text" name="description"th:field="${video.description}" required>
+    <select th:field="${video.category}" required>
+        <option th:each=" c : ${categorys}" th:value="${c.id}" th:text="${c.name}">
+
+        </option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

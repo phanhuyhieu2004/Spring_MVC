@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .container {
+            margin: 50px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .search-bar {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 200px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="#" class="button">Add new customer</a>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td>john@example.com</td>
+        <td>123 Main St, City</td>
+        <td><a href="#">Edit</a></td>
+        <td><a onclick="return confirm('Delete?')">Delete</a></td>
+        <td><a href="#">View</a></td>
+    </tr>
+    <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+</body>
+</html>

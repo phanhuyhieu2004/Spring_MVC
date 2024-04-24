@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<a th:href="@{/create-video}">Add</a>
+
+<form th:action="@{/videos}"method="get">
+    <div class="search">
+        <input type="text"name="s" placeholder="Search" >
+        <button type="submit" value="button">
+        </button>
+
+    </div>
+</form>
+<div th:if="${#lists.isEmpty(videos
+                )}">
+    <p>Không tìm thấy kết quả</p>
+</div>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Description</th> <th>Catergory</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    <tbody>
+    <th:block th:each="video,videoStart :${videos}">
+        <tr>
+            <td th:text="${videoStart.index+1}"></td>
+            <td th:text="${video.name}"></td>
+            <td th:text="${video.description}"></td>
+            <td th:text="${video.category.name}"></td>
+            <td ><a th:href="@{/edit-video/__${video.id}__}">Edit</a></td>
+            <td ><a th:href="@{/delete-video/__${video.id}__}"onclick="return confirm('Xoa hay khong ?')">Delete</a></td>
+            <td ><a th:href="@{/view-video/__${video.id}__}">View</a></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>

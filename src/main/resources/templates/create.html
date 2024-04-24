@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/create-video}" th:object="${video}" method="post">
+    <input type="text" name="name" th:field="*{name}" placeholder="Nhap Ten" required  th:value="${error != null ? error.getBindingResult().getTarget().getName() : ''}">
+    <span th:if="${error != null && error.hasFieldErrors('name')}"
+          th:text="${error.getFieldError('name').getDefaultMessage()}"></span>
+    <input type="text" name="description"th:field="*{description}" placeholder="Nhap mo ta" required minlength="5" maxlength="100">
+<select th:field="*{category}">
+    <option th:each=" c : ${categorys}" th:value="${c.id}" th:text="${c.name}">
+
+    </option>
+</select>
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
