@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${info}">Title</title>
+</head>
+<body>
+<a href="/books"style="text-decoration: none">Quay về list</a>
+<h1 th:text="${info}"></h1>
+
+
+<div th:if="${book}">
+    <p>Id : <span th:text="${book.id}"></span></p>
+    <p>Title : <span th:text="${book.title}"></span></p>
+    <p>Quantity : <span th:text="${book.quantity}"></span></p>
+    <form th:action="@{/borrow/{id}(id=${book.id})}" method="post">
+        <button type="submit">Mượn sách</button>
+    </form>
+
+</div >
+<div th:unless="${book}">
+  <p>Book not found</p>
+</div>
+</body>
+</html>

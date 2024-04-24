@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${return}">Title</title>
+</head>
+<body>
+<a href="/books"style="text-decoration: none">Quay về list</a>
+
+<form th:action="@{/returns}"method="post">
+<h1  th:text="${return}"></h1>
+    <input type="text" name="borrowedCode" required placeholder="Làm ơn nhập mã đi ">
+    <button type="submit">Trả sách đi </button>
+</form>
+</body>
+</html>

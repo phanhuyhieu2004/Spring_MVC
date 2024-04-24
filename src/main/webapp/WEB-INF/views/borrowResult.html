@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${borrow}">Title</title>
+</head>
+<body>
+<a href="/books"style="text-decoration: none">Quay về list</a>
+<h1 th:text="${borrow}"></h1>
+<div th:if ="${borrowCode}">
+    <p>Mã mượn sách là :<span th:text="${borrowCode}"></span>
+    </p>
+</div>
+
+<div th:unless="${borrowCode}">
+    <p th:text="${error}"></p>
+</div>
+</body>
+</html>

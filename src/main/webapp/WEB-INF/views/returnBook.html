@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${result}"></title>
+</head>
+<body>
+<h1 th:text="${result}"></h1>
+<div th:if="${message}">
+    <p>Ket qua la <span th:text="${message}"></span></p>
+</div>
+<div th:if="${errors}">
+    <p>Ket qua la <span th:text="${errors}"></span></p>
+
+</div>
+<a href="/books"style="text-decoration: none">Quay về list</a>
+
+</body>
+</html>
