@@ -104,7 +104,7 @@ public class ApplicationConfig implements ApplicationContextAware {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/b6bt1?useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/blog?useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("123456789");
         return dataSource;
